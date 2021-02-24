@@ -1,4 +1,4 @@
-# MortgageChoiceDevExam
+# Mortgage Choice Dev Exam
 The task is to build a simple application with the following requirements:
 
 Create a simple ATM application with the following features:
