@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="AccountTransactions\Command\" />
+    <Folder Include="AccountTransactions\Queries\GetBalance\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ATMWeb.Domain\ATMWeb.Domain.csproj" />
+    <ProjectReference Include="..\ATMWeb.Persistence\ATMWeb.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
