@@ -19,8 +19,7 @@ import { LoginService, AuthResponseData } from '../../services/login.service';
 })
 
 export class LoginComponent {
-  
-  isLoading = false;
+  isLoginMode = true;
   error: string = '';
 
   constructor(private loginService: LoginService, private router: Router) {}
@@ -30,29 +29,25 @@ export class LoginComponent {
     if (!form.valid) {
       return;
     }
+
     const accountNumber = form.value.accountNumber;
     const accountPIN = form.value.accountPIN;
 
     let authObs: Observable<AuthResponseData>;
 
-    this.isLoading = true;
+    console.log(form.value);
 
-    
-      authObs = this.loginService.login(accountNumber, accountPIN);
-    
+    authObs = this.loginService.login(accountNumber, accountPIN);
 
     authObs.subscribe(
-      resData => {
-        console.log(resData);
-        this.isLoading = false;
-        this.router.navigate(['/recipes']);
+      resData => {        
+        console.log(resData);        
+        this.router.navigate(['/app-atmwebapp']);
       },
-      errorMessage => {
-        console.log(errorMessage);
-        this.error = errorMessage;
-        this.isLoading = false;
+      errorMessage => {      
+        this.error = errorMessage;        
       }
-    );
+    );    
 
     form.reset();
   }

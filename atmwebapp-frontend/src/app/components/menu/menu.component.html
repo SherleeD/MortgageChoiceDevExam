@@ -5,12 +5,10 @@
 
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a href="/" class= navbar-brand>ATM Menu</a>
-                    </div>
-
+                    <!-- <div class="navbar-header">
+                        <a routerLink="/" class= navbar-brand>ATM Menu</a>
+                    </div> -->
                     
-
                     <div class="navbar-default">
                         <ul class="nav navbar-nav">
 
@@ -34,7 +32,7 @@
                                 </ul>
                             </li>
                             
-                            <li class="dropdown" appDropdown>
+                            <li class="dropdown" appDropdown *ngIf="isAuthenticated">
                                 <a style="cursor: pointer;" class="dropdown-toggle" role="button" >Withdrawal <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a routerLink="/withdrawal-savings">Savings</a></li>

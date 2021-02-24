@@ -8,19 +8,20 @@ import { LoginService } from '../../services/login.service';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent implements OnInit, OnDestroy {
+export class MenuComponent implements OnInit, OnDestroy {  
   isAuthenticated = false;
-  private userSub: Subscription;
 
-  constructor(    
-    private loginService: LoginService
-  ) {}
+  //TypeScript 2.7 includes a strict class checking where all the properties should be initialized in the constructor. A workaround is to add the ! as a postfix to the variable name
+  private userSub!: Subscription;
+  
+
+  constructor(        
+    private loginService: LoginService ) 
+    { }
 
   ngOnInit() {
     this.userSub = this.loginService.user.subscribe(user => {
-      this.isAuthenticated = !!user;
-      console.log(!user);
-      console.log(!!user);
+      this.isAuthenticated = !!user;            
     });
   }
   
