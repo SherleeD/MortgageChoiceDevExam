@@ -1,0 +1,49 @@
+
+<form #postForm="ngForm" (ngSubmit)="onDepositPost(postForm.value)">
+
+    <div class="container">
+        <div class="row">        
+          <div class="col-md-12">
+            <div class="card">
+    
+                <div class="content">
+                    <div class="container">
+        
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+                                <div class="card card-hidden">
+                                    <div class="content">
+                                        <div class="form-group">
+                                            <h4>Please enter amount to deposit:</h4>      
+                                            <input type="number" placeholder="Amount to deposit" class="form-control" id="amountDeposit" required  ngModel name="amountDeposit">
+                                        </div>                                        
+                                    </div>
+        
+                                    <div class="footer text-center" style="padding-top: 20px;">
+                                        <button class="btn btn-fill btn-primary btn-wd" type="submit"
+                                                [disabled]="!postForm.valid" >Continue</button>                              
+                                    </div>
+        
+                                </div>
+        
+                            </div>                                
+                        
+                        </div>  
+                      
+                      </div>
+        
+                </div>
+    
+    
+    
+            </div>        
+          </div>  
+            
+        </div>        
+      </div>
+    
+
+</form>
+
+
+

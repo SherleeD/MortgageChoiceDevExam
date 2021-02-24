@@ -1,0 +1,48 @@
+<form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" >
+
+    <div class="wrapper wrapper-full-page">
+        <div class="full-page login-page" data-color="grey" data-image="@ViewBag.BackgroundPath">
+            <div class="content">
+                <div class="container">
+    
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+                            <div class="card card-hidden">
+                                <div class="content">
+
+                                    <div class="alert alert-danger" *ngIf="error">
+                                        <p>{{ error }}</p>
+                                      </div>
+
+                                    <div class="form-group">
+                                        <h4>Please enter your Account Number:</h4>      
+                                        <input type="text" placeholder="Your account number" class="form-control" id="accountNumber" required ngModel name="accountNumber" >            
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <h4>Please enter your PIN:</h4>      
+                                        <input type="password" placeholder="Your PIN" class="form-control" id="accountPIN" required ngModel name="accountPIN"  >            
+                                    </div>
+                                </div>
+    
+                                <div class="footer text-center" style="padding-top: 20px;">
+                                    <button class="btn btn-fill btn-primary btn-wd" type="submit" [disabled]="!authForm.valid">Login</button>                              
+                                </div>
+    
+                            </div>
+    
+                        </div>                                
+                    
+                    </div>  
+                  
+                  </div>
+    
+            </div>
+    
+        </div>
+    </div>    
+
+</form>
+
+
+

@@ -1,0 +1,71 @@
+
+
+    <div class="container">
+        <div class="row">        
+          <div class="col-md-12">
+            <div class="card">
+    
+                <div class="content">
+                    <div class="container">
+        
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+                                <div class="card card-hidden">
+                                    <div class="content">
+                                        <div class="form-group">
+                                            <h4>Date :  
+                                                <span>{{today | date:'fullDate'}}</span>                                            
+                                            </h4> 
+                                            
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <h4>Time :  
+                                                <span>{{today | date:'h:mm a z'}}</span>                                            
+                                            </h4> 
+                                            
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <h4>Account Number:</h4>
+                                            <p>{{ acctnumber }} </p>                                            
+                                        </div>                                                                                
+    
+                                        <div class="form-group">
+                                            <h4>Available Balance:                                                
+                                            </h4>
+                                        </div>  
+
+                                        <div class="alert alert-danger" *ngIf="error">
+                                            <h1>An Error Occured!</h1>
+                                            <p> {{ error }} </p>
+
+                                        </div>
+                                        
+                                        
+                                    </div>
+        
+                                    
+        
+                                </div>
+        
+                            </div>                                
+                        
+                        </div>  
+                      
+                      </div>
+        
+                </div>
+    
+    
+    
+            </div>        
+          </div>  
+            
+        </div>        
+      </div>
+
+
+
+
+
