@@ -31,10 +31,11 @@ From the TestData folder I have InsertTestDataScript.sql script file that you ca
 
 **My trade-offs (anything I left out, or what I might do differently if I were to spend additional time on the project.)**
 
-I left out the front-end part but if given the time I will continue to do the following where I got an issue and not yet completed.
- - applying of the authentication result to display the menu option available when the user successfully login.
+I left out the front-end part but if given the time I will continue to do the following. 
  - passing of the account id to balance inquiry, deposit and withdrawal parameter currently it is hard-coded just for me to be able to call the web api to save the data and get a response.
  - displaying of the returned balance inquiry response to the UI.
+ - handling and displaying of error messages
+ - it can show an error message if there's no connection found to the web api but I still need to fix the issue where the user can view the menu even though the credential is not valid 
 
 Angular Level: Beginner
 
